@@ -111,6 +111,23 @@ lead to bugs.
 
 There are a few conveniences in `cats.syntax.eq`, in particular, `===` and `=!=` operators that rely on `eqv`.
 
-#### 1.5.2. Comparing Ints
+#### 1.5.2 Comparing Ints
+
+`cats.instances.int._` provides `Eq[Int]`
+
+#### 1.5.3 Comparing Options
+
+`cats.instances.options._` provides `Eq[Option]`
+
+Note that `Some` is a different type from `Option`. `cats.syntax.option._` provides `.some` and `none[T]`
+methods as conveniences for creating option-y literals.
+
+#### 1.5.4 Comparing Custom Types
+
+`Eq.instance[T]` takes a function `(T, T) => Boolean` and produces an `Eq[T]`.
+
+#### 1.5.5 Exercise: Equality, Liberty, and Felinity
+
+[s1_5_5.scala](s1_5_5.scala)
 
 
