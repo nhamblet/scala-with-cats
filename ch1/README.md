@@ -130,4 +130,43 @@ methods as conveniences for creating option-y literals.
 
 [s1_5_5.scala](s1_5_5.scala)
 
+### 1.6 Controlling Instance Selection
+
+The section addresses how instances are selected, primarily around sub-types and when multiple
+instances are available.
+
+#### 1.6.1 Variance
+
+`B` is a subtype of `A` if you can use a `B` anywhere you expect an `A`.
+
+Variance annotations are added to type parameters, `F[+A]` or `F[-A]`.
+
+***Covariance*** means that `F[B]` is a subtype of `F[A]` when `B` is a subtype of `A`, and is denoted `F[+A]`.
+Covariance is useful for many types, like collections - a `List[Circle]` is a `List[Shape]`.
+
+***Contravariance*** is indicated by `F[-A]` and means that `F[B]` is a supertype of `F[A]`.
+Contravariance is useful for things that model processes that take an `A`. Think of `Function1`,
+contravariant in the input type, because if `B` is a subtype of `A`, then a function that takes `A`s
+as inputs can be applied to any `B`, and thus is a function of `B`s (by restriction).
+
+***Invariance*** is when there is no subtype implications, and is denoted without a `+` or `-`, just `F[A]`.
+
+Cats generally prefers invariant type classes, because this allows subtypes to provide specific instances.
+An example where you see this is that `Some`, a sub-type of `Option`, won't resolve if only `Option`
+instances are available, which is part of why we saw the `some` and `none` methods earlier.
+
+| Type class variance      | In- | Co- | Contra- |
+--------------------------------------------------
+| Supertype used?          | No  | No  | Yes     |
+| Specific type preferred? | No  | Yes | Yes     |
+
+### 1.7 Summary
+
+We have seen that
+* type classes are generic traits in the `cats` package
+* type classes have companion objects for materializing instances
+* default instances are in `cats.instances` and organized by parameter type rather than by type class
+* my type classes have *syntax* provided by `cats.syntax`
+
+Next, we'll see several broad and powerful type classes.
 
