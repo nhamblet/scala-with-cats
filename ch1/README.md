@@ -97,7 +97,7 @@ You can always provide your own instances of the cats type classes.
 
 There are conveniences for `Show`, that take a function `A => String` and produce a `Show[A]` for you.
 
-#### 1.4.6 Exercise: [Cat Show](s4_catShow.scala)
+#### 1.4.6 Exercise: [Cat Show](s4)
 
 ### 1.5 Example: Eq
 
@@ -156,7 +156,7 @@ An example where you see this is that `Some`, a sub-type of `Option`, won't reso
 instances are available, which is part of why we saw the `some` and `none` methods earlier.
 
 | Type class variance      | In- | Co- | Contra- |
---------------------------------------------------
+| ------------------------ | --- | --- | ------- |
 | Supertype used?          | No  | No  | Yes     |
 | Specific type preferred? | No  | Yes | Yes     |
 
