@@ -6,5 +6,5 @@ along with my solutions as I work through the exercises
 (yes, there are solutions in the book already).
 
 * [Chapter 1. Introduction](ch1)
-* [Chapter 2, Monoids and Semigroups](ch2)
+* [Chapter 2. Monoids and Semigroups](ch2)
 
