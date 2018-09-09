@@ -5,8 +5,9 @@ I've left some of my failed attempts in as breadcrumbs, and the indentation is p
 
 ### Why Bother?
 
-I've actually got two versions of a solution to the exercise. One uses `State` as suggested,
-the other does not, to compare why I'd care to use the monad. The major difference in the
+I've actually got two versions of a solution to the exercise. [One](src/main/scala/sandbox/Main.scala)
+uses `State` as suggested, [the other](src/main/scala/sandbox/NoState.scala) does not,
+to compare why I'd care to use the monad. The major difference in the
 actual lines of code seems to be that in the non-`State`-based solution, you manually
 pass the state around between the various helper functions, so it can make its way down to
 where the work will happen.
