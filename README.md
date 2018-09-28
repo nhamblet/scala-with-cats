@@ -9,4 +9,5 @@ along with my solutions as I work through the exercises
 * [Chapter 2. Monoids and Semigroups](ch2)
 * [Chapter 3. Functors](ch3)
 * [Chapter 4. Monads](ch4)
+* [Chapter 5. Monad Transformers](ch5)
 
