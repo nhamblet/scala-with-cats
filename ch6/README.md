@@ -103,6 +103,35 @@ failing without at least one error.
 `Either` and `Validated` as needed, eith `toEither` and `toValidated`, or even `withEither` and
 `withValidated`.
 
-#### 6.4.4 Exercise: Form Validation
+#### 6.4.4 Exercise: [Form Validation](form-validation)
 
+### 6.5 Apply and Applicative
+
+Semigroupal isn't that common in normal functional programming literature, it provides a subset of
+what is more common, called "applicatives". They provide alternative encodings of the same notion
+of joining contexts.
+
+There are two applicative type classes in cats.
+
+1. `cats.Apply` extends `Semigroupal` and `Functor` with an `ap` method for applying a parameter to
+    a function in a context. `product` can then be defined in terms of `ap`.
+2. `cats.Applicative` extends `Apply` with `pure`, that we saw with monads.
+
+In the above, `Apply.ap` introduces the newest structure, it has the following signature:
+
+    ```
+    def ap[A, B](ff: F[A => B])(fa: F[A]): F[B] // Semigroupal[F] and Functor[F]
+    ```
+
+#### 6.5.1 The Hierarchy of Sequencing Type Classes
+
+A full hierarchy of cats type classes is [online](https://github.com/tpolecat/cats-infographic).
+
+The more constraints a type has, the more guarantees we have about its behavior, but the fewer
+behaviors we can model.
+
+### 6.6 Summary
+
+Monads and functors are the mostly widely used sequencing data types covered in this book. Semigroupal
+and applicative are mostly commonly used for combining independent values.
 
