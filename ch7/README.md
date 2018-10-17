@@ -25,21 +25,17 @@ You can implement `map`, `flatMap`, `filter`, and `sum` on `List` with folds (`f
 
 `Foldable`'s `foldLeft` looks like:
 
-    ```
     trait Foldable[X[_]] {
       def foldLeft[A, B](as: X[A], b: B)(f: (B, A) => B)
     }
-    ```
 
 #### 7.1.4.1 Folding Right
 
 The definition of `foldRight` uses `Eval`:
 
-    ```
     trait Foldable[X[_]] {
       def foldRight[A, B](fa: F[A], lb: Eval[B])(f: (A, Eval[B]) => Eval[B]): Eval[B]
     }
-    ```
 
 This makes `foldRight` *stack safe*, because we can defer operations with `Eval`. Note that `List`
 and `Vector` have stack safe `foldRight` in the standard library, but `Stream` does not.
@@ -62,11 +58,9 @@ There are also a few utilities which rely on `Monoid` instances:
 
 You can also compose `Foldable`s to traverse deeper structures:
 
-    ```
     import cats.instances.vector._
     val ints = List(Vector(1, 2, 3), Vector(4, 5, 6))
     (Foldable[List] compose Foldable[Vector]).combineAll(ints)
-    ```
 
 #### 7.1.4.3 Syntax for Foldable
 
@@ -118,12 +112,10 @@ if there are any, or the success if they are all successes.
 The `Traverse` typeclass generalizes the example above to work not just on `List`, but any instance of `Traverse`.
 It is given by:
 
-    ```
     trait Traverse[F[_]] {
       def traverse[G[_]: Applicative, A, B](inputs: F[A])(func: A => G[B]): G[F[B]]
       def sequence[G[_]: Applicative, B](inputs: F[G[B]]): G[F[B]] = traverse(inputs)(identity)
     }
-    ```
 
 ## 7.3 Summary
 
