@@ -12,4 +12,5 @@ along with my solutions as I work through the exercises
 * [Chapter 5. Monad Transformers](ch5)
 * [Chapter 6. Semigroupal and Applicative](ch6)
 * [Chapter 7. Foldable and Traverse](ch7)
+* [Chapter 8. Case Study: Testing Asynchronous Code](ch8)
 
