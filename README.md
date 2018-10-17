@@ -10,4 +10,6 @@ along with my solutions as I work through the exercises
 * [Chapter 3. Functors](ch3)
 * [Chapter 4. Monads](ch4)
 * [Chapter 5. Monad Transformers](ch5)
+* [Chapter 6. Semigroupal and Applicative](ch6)
+* [Chapter 7. Foldable and Traverse](ch7)
 
