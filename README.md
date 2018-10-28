@@ -13,4 +13,5 @@ along with my solutions as I work through the exercises
 * [Chapter 6. Semigroupal and Applicative](ch6)
 * [Chapter 7. Foldable and Traverse](ch7)
 * [Chapter 8. Case Study: Testing Asynchronous Code](ch8)
+* [Chapter 9. Case Study: Map-Reduce](ch9)
 
