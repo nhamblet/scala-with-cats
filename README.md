@@ -14,4 +14,5 @@ along with my solutions as I work through the exercises
 * [Chapter 7. Foldable and Traverse](ch7)
 * [Chapter 8. Case Study: Testing Asynchronous Code](ch8)
 * [Chapter 9. Case Study: Map-Reduce](ch9)
+* [Chapter 10. Case Study: Data Validation](ch10)
 
