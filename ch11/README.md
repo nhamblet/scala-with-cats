@@ -27,7 +27,7 @@ The main idea is for each machine to store a separate counter for each machine i
 is only allowed to increment its own counter. When machines reconcile counts, they take the maximum reported
 count for each machine.
 
-### 11.2.3 Exercise: GCounter Implementation
+#### 11.2.3 Exercise: GCounter Implementation
 
 ### 11.3 Generalisation
 
